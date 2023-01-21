@@ -1,7 +1,9 @@
 # RAD Calculator (Mini Calculator)
 
 RAD Calculator is desktop application and it is a mini calculator using JavaFx. It consist with two windows for basic calculations and Extra calculations.
+
 </br>
+
 Basic calculations
 - Addition
 - Subtration

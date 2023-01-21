@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: radial-gradient(center 50% 50% , radius 100% , #66c4a7, #34716d);" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="14.0" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: #0e563c; -fx-border-width: 1 1 1 1;" text="CALCULATOR" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Calisto MT Bold" size="35.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8980392217636108" green="1.0" blue="0.8745098114013672" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.43529412150382996" green="1.0" blue="0.2980392277240753" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="num1" alignment="CENTER" centerShape="false" layoutX="25.0" layoutY="64.0" prefHeight="60.0" prefWidth="300.0" promptText="0" style="-fx-border-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #0e993c 62%,  #34efa5 88%); -fx-border-width: 3 3 3 3; -fx-background-color: radial-gradient(center 50% 50% , radius 100% , #ffebcd, #34efa5);" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="num2" alignment="CENTER" layoutX="25.0" layoutY="176.0" prefHeight="60.0" prefWidth="300.0" promptText="0" style="-fx-border-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #0e993c 62%,  #34efa5 88%); -fx-background-color: radial-gradient(center 50% 50% , radius 100% , #ffebcd, #34efa5); -fx-border-width: 3 3 3 3;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Label fx:id="sign" alignment="CENTER" contentDisplay="CENTER" layoutX="67.0" layoutY="131.0" prefHeight="35.0" prefWidth="50.0" style="-fx-background-color: radial-gradient(center 50% 50% , radius 100% , #ffebcd, #069848); -fx-border-color: linear-gradient(from 13px 38px to 52px 52px, reflect,  #15cf07, #008a15 100%); -fx-border-width: 2 2 2 2;" textFill="#008002" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="131.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+      <Label fx:id="answer" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="250.0" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: radial-gradient(center 50% 50% , radius 100% , #ffebcd, #069848); -fx-border-color: linear-gradient(from 13px 38px to 52px 52px, reflect,  #15cf07, #008a15 100%); -fx-border-width: 3 3 3 3;" text="Answer Goes Here.." textFill="#006f00" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="248.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+      <Button fx:id="add" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="322.0" mnemonicParsing="false" onAction="#addition" prefHeight="60.0" prefWidth="86.0" style="-fx-background-color: radial-gradient(center 50% 50% , radius 100% , #ffebcd, #008080); -fx-border-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #0e993c 62%,  #0e563c 88%); -fx-border-width: 2 1 1 2;" text="+" textFill="#008a07" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="262.5" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="sub" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="320.0" mnemonicParsing="false" onAction="#subtraction" prefHeight="60.0" prefWidth="87.5" style="-fx-background-color: radial-gradient(center 50% 50% , radius 100% , #ffebcd, #008080); -fx-border-width: 2 1 1 1; -fx-border-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #0e993c 62%,  #0e563c 88%);" text="−" textFill="#008a07" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="87.5" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="mul" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="320.0" mnemonicParsing="false" onAction="#multipication" prefHeight="60.0" prefWidth="87.5" style="-fx-background-color: radial-gradient(center 50% 50% , radius 100% , #ffebcd, #008080); -fx-border-width: 2 1 1 1; -fx-border-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #0e993c 62%,  #0e563c 88%);" text="×" textFill="#008a07" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="87.5" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="div" alignment="CENTER" contentDisplay="CENTER" layoutX="261.0" layoutY="320.0" mnemonicParsing="false" onAction="#division" prefHeight="60.0" prefWidth="87.5" style="-fx-background-color: radial-gradient(center 50% 50% , radius 100% , #ffebcd, #008080); -fx-border-width: 2 2 1 1; -fx-border-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #0e993c 62%,  #0e563c 88%);" text="/" textFill="#008a07" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="262.5" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="gotoScene2" layoutX="6.0" layoutY="373.0" mnemonicParsing="false" onAction="#loadScene2" prefHeight="60.0" prefWidth="350.0" style="-fx-background-color: radial-gradient(center 50% 50% , radius 100% , #ffebcd, #008080); -fx-border-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #0e993c 62%,  #0e563c 88%); -fx-border-width: 1 2 1 2;" text="Sin/Cos/Tan/Exponential" textFill="#008a07" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="380.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="resetBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="440.0" mnemonicParsing="false" onAction="#reset" prefHeight="60.0" prefWidth="350.0" style="-fx-background-color: radial-gradient(center 50% 50% , radius 100% , #ffebcd, #008080); -fx-border-color: linear-gradient(from 30% 30% to 23% 30%, repeat,  #0e993c 62%,  #0e563c 88%); -fx-border-width: 1 2 2 2;" text="Clear" textFill="#008a07" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="440.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>
